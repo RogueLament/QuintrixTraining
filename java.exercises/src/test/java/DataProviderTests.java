@@ -1,9 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-//create another class for builder
-//create mother for Houston
-//write the same tests for two new states
-//add dentaylor as collaborator on github and as reviewer on pull request
+
 public class DataProviderTests {
 	@Test
 	public void canGetTexasStateName() {
