@@ -147,12 +147,10 @@ public class DataProviderTests {
 	}
 	
 	private String getState(LocationObjectMother mother) {
-		
 		return mother.State.Name;
 	}
 	
 	private String getCity(LocationObjectMother mother) {
-		
 		return mother.City.Name;
 	}
 }
