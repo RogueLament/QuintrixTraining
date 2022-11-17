@@ -1,0 +1,80 @@
+Title: Carousel-test-01
+Summary: Verify carousel cycles through images as expected
+Pre-conditions: N/A
+Steps: 1. Be on homepage
+2. Watch carousel go through slides automatically
+Expected result: Carousel cycles through 5 images in order
+Post condition: N/A
+Actual result: Cycles through images as expected
+Status: pass
+
+Title: Carousel-test-02
+Summary: Verify carousel maintains consistent size
+Pre-conditions: N/A
+Steps: 1. Be on homepage
+2. Watch carousel go through slides automatically
+Expected result: Carousel stays a constant size
+Post condition: N/A
+Actual result: Resizes to a smaller height on “SVT SUITE” image due to size of image
+Status: fail
+
+Title: Carousel-test-03
+Summary: Verify carousel images links work
+Pre-conditions: N/A
+Steps: 1. Be on homepage
+2. Click on first image
+3. Go back to homepage
+4. Cycle to next image
+5. Repeat from step 2 four times, cycling one more on step 3 each time
+Expected result: Each image will send user to the webpage referenced by the image and text
+Post condition: N/A
+Actual result: Each image goes to correct correct page
+Status: pass
+
+Title: Search-test-01
+Summary: Verify search finds correct item with exact name
+Pre-conditions: Exact name of existing item on site
+Steps: 1. Be on homepage
+2. Click magnifying glass icon in upper right corner
+3. Enter name of item into search box (example: “HERITAGE 50TH ANNIVERSARY SVT”)
+4. Press enter
+5. Click first result
+Expected result: First result will link to correct item
+Post condition: Correct item page will display
+Actual result: Links to external search engine, first result was correct
+Status: pass
+
+Title: Search-test-02
+Summary: Verify search displays relevant results for vague searches
+Pre-conditions: Vague term related to site content
+Steps: 1. Be on homepage
+2. Click magnifying glass icon in upper right corner
+3. Enter name relevant search (example: “software”)
+4. Press enter
+Expected result: First 4 results will link to relevant items
+Post condition: N/A
+Actual result: Links to external search engine, first 4 results were relevant to search term
+Status: pass
+
+Title: Search-test-02
+Summary: Verify search displays relevant results for vague searches
+Pre-conditions: Vague term related to site content
+Steps: 1. Be on homepage
+2. Click magnifying glass icon in upper right corner
+3. Enter name relevant search (example: “software”)
+4. Press enter
+Expected result: First 4 results will link to relevant items
+Post condition: N/A
+Actual result: Links to external search engine, first 4 results were relevant to search term
+Status: pass
+
+Title: Add-to-Cart-test-01
+Summary: Verify single item can be added to cart
+Pre-conditions: Purchasable item
+Steps: 1. Be on homepage
+2. Search for purchasable item (example: “SVT Suite”)
+3. Click “ADD TO CART” button
+Expected result: Item will be added to cart
+Post condition: Cart item will have a “1” on it
+Actual result: Item added to cart, cart item has a “1” on it
+Status: pass
