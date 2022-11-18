@@ -1,0 +1,7 @@
+1. $x("//input[@id='userName']")
+2. $x("//button")
+3. $x("//div[text()='Vega']")
+4. $x("//div[./input[@id='impressiveRadio']]")
+5. $x("//input[@id='impressiveRadio']/ancestor::div")
+6. $x("//div[./input[@id='impressiveRadio']]/label")
+7. $x("//button[@type='button' and contains(., 'Click')]")
