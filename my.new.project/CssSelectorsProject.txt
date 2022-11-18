@@ -1,0 +1,7 @@
+1. $("#userName")
+2. $(".btn")
+3. $("span:not(.navbar-toggler-icon)")
+4. $("li:contains(Main)")
+5. $("option[value=4]")
+6. document.querySelector("#sliderValue").value;
+7. document.querySelector("#userName").value;
