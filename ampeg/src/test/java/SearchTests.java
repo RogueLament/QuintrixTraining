@@ -10,7 +10,7 @@ public class SearchTests extends AmpegTests {
 	  
 	  new HomePage(this.driver,this.baseURL)
 	  .clickSearch()
-	  .sendSearchBox("HERITAGE 50TH ANNIVERSARY SVT");
+	  .search("HERITAGE 50TH ANNIVERSARY SVT");
 	  
 	  new SearchPage(this.driver,this.baseURL)
 	  .clickFirstResult();
@@ -26,7 +26,7 @@ public class SearchTests extends AmpegTests {
 	  
 	  new HomePage(this.driver,this.baseURL)
 	  .clickSearch()
-	  .sendSearchBox("software");
+	  .search("software");
 	  
 	  new SearchPage(this.driver,this.baseURL)
 	  .clickFirstResult();

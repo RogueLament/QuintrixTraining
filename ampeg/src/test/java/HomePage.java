@@ -23,7 +23,7 @@ public class HomePage extends PageObject {
 		return this;
 	}
 	
-	public HomePage sendSearchBox(String query) {
+	public HomePage search(String query) {
 		var searchBox = this.driver.findElement(By.id("searchq"));
 		
 		searchBox.sendKeys(query);

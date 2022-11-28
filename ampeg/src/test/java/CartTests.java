@@ -8,7 +8,7 @@ public class CartTests extends AmpegTests {
 		  
 		  new HomePage(this.driver,this.baseURL)
 		  .clickSearch()
-		  .sendSearchBox("SVT Suite");
+		  .search("SVT Suite");
 		  
 		  new SearchPage(this.driver,this.baseURL)
 		  .clickSecondResult();

@@ -21,11 +21,4 @@ public abstract class PageObject {
 	public void setURL(String uRL) {
 		this.uRL = uRL;
 	}
-	
-	//A test that didn't pan out
-//	public <ChildPage extends PageObject> ChildPage goBackPage() {
-//		driver.navigate().back();
-//
-//		return (ChildPage) this;
-//	}
 }

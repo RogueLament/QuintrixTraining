@@ -23,9 +23,9 @@ public class SearchPage extends PageObject {
 	}
 	
 	private SearchPage clickResult(int i) {
-		var Link = this.driver.findElement(By.xpath("//div[@id='links']/div[" + i + "]/article/div[2]"));
+		var link = this.driver.findElement(By.xpath("//div[@id='links']/div[" + i + "]/article/div[2]"));
 		
-		Link.click();
+		link.click();
 		
 		return this;
 	}

@@ -20,12 +20,12 @@ public class SVTSuitePage extends PageObject{
 	}
 	
 	public int getCartCounterLabel() {
-	    WebDriverWait w = new WebDriverWait(this.driver,10);
+	    WebDriverWait wait = new WebDriverWait(this.driver,10);
 	    //this span does not show up until the counter displays a number
-	    w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='counter-label']/span")));
+	    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='counter-label']/span")));
 	    
-		var counter = this.driver.findElement(By.className("counter-label"));		
+		var label = this.driver.findElement(By.className("counter-label"));		
 		
-		return Integer.parseInt(counter.getText());
+		return Integer.parseInt(label.getText());
 	}
 }
