@@ -1,18 +1,20 @@
+package StepDefinitions;
+
 import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeDriverService;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 
-public class EdgeDriverManager extends WebDriverManager {
+public class ChromeDriverManager extends WebDriverManager {
 
-	private EdgeDriverService driverService;
+	private ChromeDriverService driverService;
 	
 	@Override
 	protected void startService() throws IOException {
 		if (driverService == null) {
-			driverService = new EdgeDriverService.Builder()
-					.usingDriverExecutable(new File("msedgedriver.exe"))
+			driverService = new ChromeDriverService.Builder()
+					.usingDriverExecutable(new File("chromedriver.exe"))
 					.usingAnyFreePort()
 					.build();
 			driverService.start();
@@ -29,6 +31,7 @@ public class EdgeDriverManager extends WebDriverManager {
 
 	@Override
 	protected void createDriver() {
-        driver = new EdgeDriver(driverService);
+        driver = new ChromeDriver(driverService);
 	}
+
 }

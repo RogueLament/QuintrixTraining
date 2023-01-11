@@ -1,3 +1,4 @@
+package StepDefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,6 +12,14 @@ public class HomePage extends PageObject {
 	
 	public HomePage navigateDirect() {
 		navigateDirectURL();
+		
+		return this;
+	}
+	
+	public HomePage clickShop() {
+		var shopLink = this.driver.findElement(By.xpath("//a[@title='Shop']"));
+		
+		shopLink.click();
 		
 		return this;
 	}
