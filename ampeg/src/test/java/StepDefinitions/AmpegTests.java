@@ -1,3 +1,4 @@
+package StepDefinitions;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ public abstract class AmpegTests {
 	protected String baseURL;
 	
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws Throwable {
 		this.launchDriver();
 	}
 	
@@ -22,7 +23,7 @@ public abstract class AmpegTests {
 		this.driver.quit();
 	}
 	
-	private void launchDriver() {
+	protected void launchDriver() throws Throwable {
 		var driverPath = "C:\\Users\\Nate\\chromedriver.exe";
 		baseURL = "https://www.ampeg.com/";
 		System.setProperty("webdriver.chrome.driver", driverPath);
@@ -30,6 +31,5 @@ public abstract class AmpegTests {
 		this.driver = new ChromeDriver();
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		this.driver.manage().window().maximize();
-		this.driver.navigate().to(baseURL);
 	}
 }

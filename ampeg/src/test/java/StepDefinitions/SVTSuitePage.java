@@ -1,3 +1,5 @@
+package StepDefinitions;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +14,7 @@ public class SVTSuitePage extends PageObject{
 	}
 	
 	public SVTSuitePage clickAddtoCart() {
-		var cartLink = this.driver.findElement(By.className("box-tocart"));
+		var cartLink = this.driver.findElement(By.xpath("//div[@class='listItem-actions']/a"));
 		
 		cartLink.click();
 		
