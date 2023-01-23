@@ -3,7 +3,9 @@ import java.util.Arrays;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SearchTests extends AmpegTests {
+import foundation.TestBase;
+
+public class SearchTests extends TestBase {
   @Test
   public void canFindItemWithExactName() {
 	  var expectedURL = "https://ampeg.com/products/heritage/svt-50thAnniversary/";

@@ -1,7 +1,9 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CartTests extends AmpegTests {
+import foundation.TestBase;
+
+public class CartTests extends TestBase {
 	  @Test
 	  public void canAddtoCart() {
 		  var expectedValue = 1;
