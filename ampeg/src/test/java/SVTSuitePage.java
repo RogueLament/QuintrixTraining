@@ -12,7 +12,7 @@ public class SVTSuitePage extends PageObject{
 	}
 	
 	public SVTSuitePage clickAddtoCart() {
-		var cartLink = this.driver.findElement(By.className("box-tocart"));
+		var cartLink = this.driver.findElement(By.className("add-to-cart"));
 		
 		cartLink.click();
 		

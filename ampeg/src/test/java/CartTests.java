@@ -1,22 +1,29 @@
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class CartTests extends AmpegTests {
+import foundation.TestBase;
+
+@Listeners(ListenerTest.class)
+
+public class CartTests extends TestBase {
 	  @Test
 	  public void canAddtoCart() {
-		  var expectedValue = 1;
+		  driver.navigate().to(this.baseURL);
+		  var expectedValue = true;
 		  
 		  new HomePage(this.driver,this.baseURL)
-		  .clickSearch()
-		  .search("SVT Suite");
+		  .clickShop();
 		  
-		  new SearchPage(this.driver,this.baseURL)
-		  .clickSecondResult();
+		  new ShopPage(this.driver,this.baseURL)
+		  .clickSoftware();
 		  
-		  var actualValue = new SVTSuitePage(this.driver,this.baseURL)
-				  .clickAddtoCart()
-				  .getCartCounterLabel();
+		  new SVTSuitePage(this.driver,this.baseURL)
+		  .clickAddtoCart();
 		  
+		  var actualValue = new CartPage(this.driver,this.baseURL)
+				  .verifyAddToCart();
+				  
 		  Assert.assertEquals(actualValue, expectedValue, "Should navigate to");
 	  }
 }

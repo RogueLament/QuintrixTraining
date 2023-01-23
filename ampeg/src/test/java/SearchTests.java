@@ -1,11 +1,17 @@
 import java.util.Arrays;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class SearchTests extends AmpegTests {
+import foundation.TestBase;
+
+@Listeners(ListenerTest.class)
+
+public class SearchTests extends TestBase {
   @Test
   public void canFindItemWithExactName() {
+	  driver.navigate().to(this.baseURL);
 	  var expectedURL = "https://ampeg.com/products/heritage/svt-50thAnniversary/";
 	  
 	  new HomePage(this.driver,this.baseURL)
@@ -22,6 +28,7 @@ public class SearchTests extends AmpegTests {
 
   @Test
   public void canFindItemWithVagueSearch() {
+	  driver.navigate().to(this.baseURL);
 	  var expectedURL = Arrays.asList("https://ampeg.com/software/","https://shop.ampeg.com/software/","https://shop.ampeg.com/software/plug-ins/");
 	  
 	  new HomePage(this.driver,this.baseURL)
