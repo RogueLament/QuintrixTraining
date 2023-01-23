@@ -1,11 +1,10 @@
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import StepDefinitions.CartPage;
-import StepDefinitions.HomePage;
-import StepDefinitions.SVTSuitePage;
-import StepDefinitions.ShopPage;
 import foundation.TestBase;
+
+@Listeners(ListenerTest.class)
 
 public class CartTests extends TestBase {
 	  @Test
